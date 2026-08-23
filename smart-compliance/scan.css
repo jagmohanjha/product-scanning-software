@@ -1,0 +1,268 @@
+/* ================= SCAN PAGE ================= */
+
+.scan-page {
+    min-height: calc(100vh - 75px);
+
+    padding: 70px 8%;
+
+    background: #f7f9fc;
+}
+
+
+/* ================= HEADING ================= */
+
+.scan-heading {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.scan-heading p {
+    color: #2563eb;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 10px;
+}
+
+.scan-heading h1 {
+    font-size: 42px;
+
+    margin-bottom: 12px;
+}
+
+.scan-heading span {
+    color: #667085;
+
+    font-size: 16px;
+}
+
+
+/* ================= UPLOAD CARD ================= */
+
+.upload-card {
+    width: 100%;
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 45px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    border: 1px solid #e4e7ec;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.06);
+}
+
+
+.upload-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.upload-card h2 {
+    font-size: 24px;
+
+    margin-bottom: 8px;
+}
+
+.upload-card > p {
+    color: #667085;
+
+    margin-bottom: 25px;
+}
+
+
+/* ================= UPLOAD BUTTON ================= */
+
+.upload-btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.upload-btn:hover {
+    background: #1d4ed8;
+}
+
+
+/* ================= PREVIEW ================= */
+
+.preview-container {
+    display: none;
+
+    margin-top: 30px;
+}
+
+.preview-container.show {
+    display: block;
+}
+
+.preview-container img {
+    max-width: 100%;
+
+    max-height: 320px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e4e7ec;
+
+    object-fit: contain;
+}
+
+
+/* ================= FILE NAME ================= */
+
+.file-name {
+    font-size: 14px;
+
+    color: #344054;
+
+    margin-top: 15px;
+}
+
+
+/* ================= REMOVE ================= */
+
+.remove-btn {
+    display: none;
+
+    margin: 15px auto;
+
+    padding: 9px 18px;
+
+    border-radius: 7px;
+
+    border: 1px solid #d0d5dd;
+
+    background: white;
+
+    color: #344054;
+
+    cursor: pointer;
+}
+
+.remove-btn.show {
+    display: block;
+}
+
+
+/* ================= ANALYZE ================= */
+
+.analyze-btn {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #172033;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.analyze-btn:hover {
+    background: #2563eb;
+}
+
+.analyze-btn:disabled {
+    background: #98a2b3;
+
+    cursor: not-allowed;
+}
+
+
+/* ================= INFO ================= */
+
+.scan-info {
+    max-width: 850px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.scan-info div {
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid #e4e7ec;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.scan-info strong {
+    display: block;
+
+    margin-top: 10px;
+
+    margin-bottom: 7px;
+}
+
+.scan-info p {
+    color: #667085;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    .scan-page {
+        padding: 50px 5%;
+    }
+
+    .scan-heading h1 {
+        font-size: 32px;
+    }
+
+    .upload-card {
+        padding: 30px 20px;
+    }
+
+    .scan-info {
+        grid-template-columns: 1fr;
+    }
+}

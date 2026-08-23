@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scan Product - SmartCheck</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scan.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            📦 Smart<span>Check</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="scan.html" class="active">Scan Product</a>
+            <a href="index.html#features">Features</a>
+            <a href="index.html#about">About</a>
+        </nav>
+
+        <button class="login-btn">Login</button>
+
+    </header>
+
+
+    <!-- Scan Section -->
+    <main class="scan-page">
+
+        <div class="scan-heading">
+
+            <p>PRODUCT COMPLIANCE</p>
+
+            <h1>
+                Scan Your Product Label
+            </h1>
+
+            <span>
+                Upload a clear image of the product label
+                to begin compliance analysis.
+            </span>
+
+        </div>
+
+
+        <!-- Upload Card -->
+        <div class="upload-card">
+
+            <div class="upload-icon">
+                📷
+            </div>
+
+            <h2>Upload Product Image</h2>
+
+            <p>
+                Supported formats: JPG, JPEG, PNG
+            </p>
+
+
+            <label for="productImage" class="upload-btn">
+                Choose Image
+            </label>
+
+            <input
+                type="file"
+                id="productImage"
+                accept="image/png, image/jpeg, image/jpg"
+                hidden
+            >
+
+
+            <!-- Image Preview -->
+            <div id="previewContainer" class="preview-container">
+
+                <img
+                    id="previewImage"
+                    src=""
+                    alt="Product Preview"
+                >
+
+            </div>
+
+
+            <!-- File Name -->
+            <p id="fileName" class="file-name"></p>
+
+
+            <!-- Remove Button -->
+            <button
+                id="removeBtn"
+                class="remove-btn"
+                type="button"
+            >
+                Remove Image
+            </button>
+
+
+            <!-- Analyze Button -->
+            <button
+                id="analyzeBtn"
+                class="analyze-btn"
+                type="button"
+            >
+                🔍 Analyze Product
+            </button>
+
+        </div>
+
+
+        <!-- Information -->
+        <div class="scan-info">
+
+            <div>
+                🔒
+                <strong>Secure</strong>
+                <p>Your uploaded image is used for analysis.</p>
+            </div>
+
+            <div>
+                🤖
+                <strong>AI Assisted</strong>
+                <p>Product information will be extracted automatically.</p>
+            </div>
+
+            <div>
+                ⚖️
+                <strong>Compliance Check</strong>
+                <p>Required declarations will be checked.</p>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="scan.js"></script>
+
+</body>
+
+</html>
