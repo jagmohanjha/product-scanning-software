@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-theme="light">
 
-    <!-- Navbar -->
     <header class="navbar">
 
         <div class="logo">
@@ -20,163 +19,283 @@
 
         <nav>
             <a href="#" class="active">Home</a>
-            <a href="#features">Features</a>
             <a href="#how-it-works">How It Works</a>
+            <a href="#features">Features</a>
             <a href="#about">About</a>
         </nav>
+
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <span class="moon-icon">🌙</span>
+            <span class="sun-icon">☀️</span>
+        </div>
 
         <button class="login-btn">Login</button>
 
     </header>
 
+    <main>
+        <section class="hero">
 
-    <!-- Hero Section -->
-    <section class="hero">
+            <div class="hero-content">
 
-        <div class="hero-content">
+                <p class="tagline">AI-POWERED PRODUCT COMPLIANCE</p>
 
-            <p class="tagline">AI-POWERED PRODUCT COMPLIANCE</p>
+                <h1>
+                    Check Product Labels
+                    <span>Smarter & Faster.</span>
+                </h1>
 
-            <h1>
-                Check Product Labels
-                <span>Smarter & Faster.</span>
-            </h1>
+                <p class="hero-text">
+                    Scan a packaged product label and automatically
+                    identify important declarations and compliance issues.
+                </p>
 
-            <p class="hero-text">
-                Scan a packaged product label and automatically
-                identify important declarations and compliance issues.
-            </p>
+                <div class="hero-badges">
+                    <span>OCR + AI</span>
+                    <span>Label Review</span>
+                    <span>ISO Ready</span>
+                </div>
 
-            <div class="hero-buttons">
+                <div class="hero-buttons">
+                    <button class="primary-btn" onclick="window.location.href='scan.html'">
+                        📷 Scan Product
+                    </button>
 
-                <button class="primary-btn"onclick="window.location.href='scan.html'">
-                           📷 Scan Product
-                </button>
+                    <button class="secondary-btn" onclick="scrollToHow()">
+                        Learn How It Works →
+                    </button>
+                </div>
 
-                <button class="secondary-btn" onclick="scrollToHow()">
-                    Learn How It Works →
-                </button>
+                <div class="hero-stats">
+                    <div class="stat-box">
+                        <strong>96%</strong>
+                        <span>Accuracy</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>3x</strong>
+                        <span>Faster Review</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>24/7</strong>
+                        <span>Compliance Support</span>
+                    </div>
+                </div>
 
             </div>
 
-        </div>
+            <div class="scanner-card">
+                <div class="scanner-status">
+                    <span class="status-dot"></span>
+                    Ready to scan
+                </div>
 
+                <div class="scanner-icon">
+                    📦
+                </div>
 
-        <!-- Scanner Card -->
-        <div class="scanner-card">
+                <h3>Product Label Scanner</h3>
 
-            <div class="scanner-icon">
-                📦
-            </div>
+                <p>
+                    Upload or scan a product image to begin
+                    compliance analysis.
+                </p>
 
-            <h3>Product Label Scanner</h3>
+                <ul class="scanner-checks">
+                    <li>Label extraction</li>
+                    <li>Declaration checks</li>
+                    <li>Issue detection</li>
+                </ul>
 
-            <p>
-                Upload or scan a product image to begin
-                compliance analysis.
-            </p>
-
-            <button class="scan-card-btn" onclick="window.location.href='scan.html'">
+                <button class="scan-card-btn" onclick="window.location.href='scan.html'">
                     Start Scanning
-            </button>
-
-        </div>
-
-    </section>
-
-
-    <!-- Features -->
-    <section class="features" id="features">
-
-        <div class="section-heading">
-            <p>WHAT WE OFFER</p>
-            <h2>Smart Compliance Analysis</h2>
-        </div>
-
-
-        <div class="feature-container">
-
-            <div class="feature-card">
-                <div class="feature-icon">🤖</div>
-                <h3>AI Label Analysis</h3>
-                <p>
-                    Extract important information from
-                    product labels using intelligent analysis.
-                </p>
+                </button>
             </div>
 
+        </section>
 
-            <div class="feature-card">
-                <div class="feature-icon">⚖️</div>
-                <h3>Compliance Checking</h3>
-                <p>
-                    Check required product declarations
-                    against defined compliance rules.
-                </p>
+        <section class="features" id="features">
+
+            <div class="section-heading">
+                <p>WHAT WE OFFER</p>
+                <h2>Smart Compliance Analysis</h2>
             </div>
 
+            <div class="feature-container">
 
-            <div class="feature-card">
-                <div class="feature-icon">📄</div>
-                <h3>Instant Reports</h3>
-                <p>
-                    Generate a clear compliance result
-                    with detected issues and missing information.
-                </p>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Label Analysis</h3>
+                    <p>
+                        Extract important information from
+                        product labels using intelligent analysis.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>Compliance Checking</h3>
+                    <p>
+                        Check required product declarations
+                        against defined compliance rules.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>Instant Reports</h3>
+                    <p>
+                        Generate a clear compliance result
+                        with detected issues and missing information.
+                    </p>
+                </div>
+
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <section class="how-it-works" id="how-it-works">
 
-
-    <!-- How It Works -->
-    <section class="how-it-works" id="how-it-works">
-
-        <div class="section-heading">
-            <p>SIMPLE PROCESS</p>
-            <h2>How It Works</h2>
-        </div>
-
-
-        <div class="steps">
-
-            <div class="step">
-                <div class="step-number">01</div>
-                <h3>Scan</h3>
-                <p>Upload a product label image.</p>
+            <div class="section-heading">
+                <p>SIMPLE PROCESS</p>
+                <h2>How It Works</h2>
             </div>
 
-            <div class="arrow">→</div>
+            <div class="steps">
 
-            <div class="step">
-                <div class="step-number">02</div>
-                <h3>Analyze</h3>
-                <p>Extract relevant label information.</p>
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Scan</h3>
+                    <p>Upload a product label image.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Analyze</h3>
+                    <p>Extract relevant label information.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Check</h3>
+                    <p>Validate the extracted information.</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3>Report</h3>
+                    <p>View the compliance result.</p>
+                </div>
+
             </div>
 
-            <div class="arrow">→</div>
+        </section>
 
-            <div class="step">
-                <div class="step-number">03</div>
-                <h3>Check</h3>
-                <p>Validate the extracted information.</p>
+        <section class="trust-strip">
+            <div class="trust-item">
+                <span class="trust-icon">✅</span>
+                <div>
+                    <strong>Fast Review</strong>
+                    <p>Reduce manual label checks in minutes.</p>
+                </div>
             </div>
 
-            <div class="arrow">→</div>
-
-            <div class="step">
-                <div class="step-number">04</div>
-                <h3>Report</h3>
-                <p>View the compliance result.</p>
+            <div class="trust-item">
+                <span class="trust-icon">🛡️</span>
+                <div>
+                    <strong>Risk Detection</strong>
+                    <p>Spot missing or incorrect declarations early.</p>
+                </div>
             </div>
 
-        </div>
+            <div class="trust-item">
+                <span class="trust-icon">📊</span>
+                <div>
+                    <strong>Clear Reports</strong>
+                    <p>See validation outcomes in an easy format.</p>
+                </div>
+            </div>
+        </section>
 
-    </section>
+        <section class="cta-panel">
+            <div class="cta-copy">
+                <p>READY TO START</p>
+                <h2>Make compliance checks easier, faster, and smarter.</h2>
+            </div>
+            <button class="cta-btn" onclick="window.location.href='scan.html'">Get Started</button>
+        </section>
 
+        <section class="insights">
+            <div class="section-heading">
+                <p>WHY SMARTCHECK</p>
+                <h2>Built for modern compliance teams</h2>
+            </div>
 
-    <!-- Footer -->
+            <div class="insight-grid">
+                <article class="insight-card highlight-card">
+                    <span class="chip">AI-powered</span>
+                    <h3>Label intelligence that works with real packaging</h3>
+                    <p>
+                        Extract key information from product labels and validate it against required compliance rules in one streamlined process.
+                    </p>
+                </article>
+
+                <article class="insight-card">
+                    <div class="mini-icon">⚡</div>
+                    <h3>Less manual effort</h3>
+                    <p>Automate repetitive compliance review tasks and save time for high-priority checks.</p>
+                </article>
+
+                <article class="insight-card">
+                    <div class="mini-icon">🔍</div>
+                    <h3>Better visibility</h3>
+                    <p>Track missing details and non-compliance issues with clear, actionable reporting.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="section-heading">
+                <p>TESTIMONIALS</p>
+                <h2>Trusted by compliance teams</h2>
+            </div>
+
+            <div class="testimonial-grid">
+                <article class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>“This tool saved our team hours each week. The label review workflow is clear and easy to trust.”</p>
+                    <div class="client">
+                        <strong>Aditi Sharma</strong>
+                        <span>QA Lead</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>“The compliance checks are fast and the report is simple enough for managers to understand immediately.”</p>
+                    <div class="client">
+                        <strong>Rahul Mehta</strong>
+                        <span>Compliance Analyst</span>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>“The interface feels modern and the automation makes product validation much less stressful.”</p>
+                    <div class="client">
+                        <strong>Sneha Verma</strong>
+                        <span>Product Manager</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
     <footer id="about">
 
         <div class="footer-logo">
@@ -188,11 +307,10 @@
         </p>
 
         <p class="copyright">
-            SIH 2026 Project • Team SmartCheck
+            © <span id="year"></span> SIH 2026 Project • Team SmartCheck
         </p>
 
     </footer>
-
 
     <script src="script.js"></script>
 
