@@ -13,7 +13,8 @@
 
 <body>
 
-    <!-- Navbar -->
+    <!-- ================= NAVBAR ================= -->
+
     <header class="navbar">
 
         <div class="logo">
@@ -22,18 +23,32 @@
 
         <nav>
             <a href="index.html">Home</a>
-            <a href="scan.html" class="active">Scan Product</a>
-            <a href="index.html#features">Features</a>
-            <a href="index.html#about">About</a>
+
+            <a href="scan.html" class="active">
+                Scan Product
+            </a>
+
+            <a href="index.html#features">
+                Features
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
         </nav>
 
-        <button class="login-btn">Login</button>
+        <button class="login-btn">
+            Login
+        </button>
 
     </header>
 
 
-    <!-- Scan Section -->
+    <!-- ================= SCAN SECTION ================= -->
+
     <main class="scan-page">
+
+        <!-- Heading -->
 
         <div class="scan-heading">
 
@@ -51,23 +66,34 @@
         </div>
 
 
-        <!-- Upload Card -->
+        <!-- ================= UPLOAD CARD ================= -->
+
         <div class="upload-card">
 
             <div class="upload-icon">
                 📷
             </div>
 
-            <h2>Upload Product Image</h2>
+
+            <h2>
+                Upload Product Image
+            </h2>
+
 
             <p>
                 Supported formats: JPG, JPEG, PNG
             </p>
 
 
-            <label for="productImage" class="upload-btn">
+            <!-- Choose Image -->
+
+            <label
+                for="productImage"
+                class="upload-btn"
+            >
                 Choose Image
             </label>
+
 
             <input
                 type="file"
@@ -77,8 +103,12 @@
             >
 
 
-            <!-- Image Preview -->
-            <div id="previewContainer" class="preview-container">
+            <!-- ================= IMAGE PREVIEW ================= -->
+
+            <div
+                id="previewContainer"
+                class="preview-container"
+            >
 
                 <img
                     id="previewImage"
@@ -90,10 +120,15 @@
 
 
             <!-- File Name -->
-            <p id="fileName" class="file-name"></p>
+
+            <p
+                id="fileName"
+                class="file-name"
+            ></p>
 
 
             <!-- Remove Button -->
+
             <button
                 id="removeBtn"
                 class="remove-btn"
@@ -103,43 +138,108 @@
             </button>
 
 
-            <!-- Analyze Button -->
+            <!-- ================= ANALYZE BUTTON ================= -->
+
             <button
                 id="analyzeBtn"
                 class="analyze-btn"
                 type="button"
+                disabled
             >
                 🔍 Analyze Product
             </button>
 
+
+            <!-- ================= OCR RESULT ================= -->
+
+            <div
+                id="ocrResult"
+                class="ocr-result"
+            >
+
+                <h2>
+                    Extracted Text
+                </h2>
+
+                <p
+                    id="ocrStatus"
+                    class="ocr-status"
+                >
+                    🔄 Waiting for analysis...
+                </p>
+
+
+                <div
+                    id="extractedText"
+                    class="extracted-text"
+                ></div>
+
+            </div>
+
         </div>
 
 
-        <!-- Information -->
+        <!-- ================= INFORMATION ================= -->
+
         <div class="scan-info">
 
             <div>
+
                 🔒
-                <strong>Secure</strong>
-                <p>Your uploaded image is used for analysis.</p>
+
+                <strong>
+                    Secure
+                </strong>
+
+                <p>
+                    Your uploaded image is used for analysis.
+                </p>
+
             </div>
 
+
             <div>
+
                 🤖
-                <strong>AI Assisted</strong>
-                <p>Product information will be extracted automatically.</p>
+
+                <strong>
+                    AI Assisted
+                </strong>
+
+                <p>
+                    Product information will be extracted automatically.
+                </p>
+
             </div>
 
+
             <div>
+
                 ⚖️
-                <strong>Compliance Check</strong>
-                <p>Required declarations will be checked.</p>
+
+                <strong>
+                    Compliance Check
+                </strong>
+
+                <p>
+                    Required declarations will be checked.
+                </p>
+
             </div>
 
         </div>
 
     </main>
 
+
+    <!-- ================= TESSERACT OCR ================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js">
+    </script>
+
+
+    <!-- ================= SCAN JS ================= -->
 
     <script src="scan.js"></script>
 
